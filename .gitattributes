@@ -1,0 +1,6 @@
+*.sh text eol=lf
+*.py text eol=lf
+*.ipynb text eol=lf
+*.Dockerfile text eol=lf
+
+*.sql linguist-language=SQL

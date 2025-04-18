@@ -1,0 +1,11 @@
+# models/staging/bq_sources.yml
+sources:
+  - name: bq_raw_data
+    description: "raw data on BQ synced from Google Sheets via Airbyte"
+    database: dx01-brand-survey-workflow
+    schema: airbyte_internal
+
+    tables:
+    - name: dx01_raw__stream_brandX_survey_result_2025_Q2
+      description: "JSON-formatted table of brand survey responses"
+  

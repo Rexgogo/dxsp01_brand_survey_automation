@@ -1,0 +1,43 @@
+# abctl
+abctl/
+ngrok/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Docker container volume
+docker/postgres/data/
+docker/superset/home/superset.db
+
+# System Files
+Thumbs.db
+
+# Sensitive config files
+.env
+*.json
+credentials/
+
+# Files
+*.log
+*.txt
+*.bak
+*.tmp
+*.db
+
+# Raw data
+*.csv
+*.xlsx
+
+# Default .gitignore content added by dbt Cloud# you shouldn't commit these into source control
+# these are the default directory names, adjust/add to fit your needs
+target/
+dbt_packages/
+logs/
+credentials/
+
+

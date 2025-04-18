@@ -1,0 +1,12 @@
+dxsp01:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /usr/app/credentials/bq-dxsp01-credentials-20250416.json
+      project: dx01-brand-survey-workflow
+      dataset: dx01
+      threads: 1
+      location: US
+      
