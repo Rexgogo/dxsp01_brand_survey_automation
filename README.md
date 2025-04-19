@@ -19,7 +19,7 @@ No-Code Zapier自動化流程進一步整合BigQuery + dbt + Looker Studio，不
 ---
 
 
-## Technical Stack
+## Technical Stack 工具技術
 
 | 工具 | 用途 |
 |------|------|
@@ -37,7 +37,7 @@ No-Code Zapier自動化流程進一步整合BigQuery + dbt + Looker Studio，不
 
 ---
 
-## Folder Structure資料結構
+## Folder Structure 資料結構
 
 ```text
 dxsp01_survey_automate_zapier/
@@ -70,7 +70,7 @@ dxsp01_survey_automate_zapier/
 
 ```
 
-## Workflow Diagram 技術流程圖
+## Workflow Diagram 工作流程圖
 
 eraser.ai
 資料流向、工具串接、測試與除錯、異常通知
@@ -82,8 +82,43 @@ eraser.ai
   E --> F[Looker Studio 看板]
 
 ```
+---
 
-## Project Results & Highlights專案成果
+## Environment Setup Guide 環境配置指南
+
+1. System
+
+Windows
+Python ver
+Docker ver
+
+2. 安裝步驟 (Installation Steps)
+
+
+
+3. API Keys & Credentials​
+
+申請Typeform API Token
+
+設定Zapier Webhook URL
+
+配置Airbyte的連線資訊​
+
+4. Local Development Setup
+
+啟動 Docker 容器
+執行資料庫遷移
+載入初始資料
+
+
+5. Testing & Verification
+
+- 接手維護人員如何測試
+- 業務單位的資料庫查詢測試
+
+---
+
+## Project Results & Highlights 專案成果
 
 **轉型成效**
 - 累積品牌市調專案資料，作為評估策略成效與改善的基礎，加速行銷團隊策略的迭代
@@ -98,14 +133,27 @@ eraser.ai
 **商業應用**
 - 支援全年品牌曝光 ROI 評估與多平台媒體配置建議
 
+---
 
+## Follow-up Optimization 後續優化 
 
-## 優化
+- 整合進完整的資料管線
+- CI/CD 自動化測試與部署
 
-- 
-- 
-- 
+---
 
-## 
+## 👤 Author Maintainer 
 
- 
+- **Rex C.**
+- **chanminglung126@gmail.com**
+- [**Profile URL**]()
+- [**GitHub URL**]()
+- **Skills:**
+  - ETL (Airflow, Airbyte...)
+  - Data Modeling & SQL Transformation (dbt, BigQuery)
+  - Cloud-based Data Warehouse (BigQuery)
+  - Python Data Analysis
+  - BI Dashboarding (Superset, Looker Studio)
+  - Automation design (Zapier)
+
+--- 
