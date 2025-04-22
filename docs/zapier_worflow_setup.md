@@ -28,7 +28,7 @@
     - 設定：
         - App：Webhooks by Zapier
         - Action：POST
-        - URL：目標API端點https://xxxxxxx.ngrok-free.app/api/v1/connections/sync (詳細請參考)
+        - URL：目標API端點https://xxxxxxx.ngrok-free.app/api/v1/connections/sync (詳細請參考doc/zapier_trigger_airbyte.md)
         - Payload Type：JSON
         - Data：選擇要傳送的欄位data { "connectionId": "18f5f65d-67a7-49ba-9838-07f56621110e" }
         - Wrap Request In Array: Yes
