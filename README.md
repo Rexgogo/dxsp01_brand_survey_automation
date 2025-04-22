@@ -2,8 +2,9 @@
 
 ## Overview專案簡介
 
-本專案是一套以Zapier為觸發中介的品牌認知調查流程數位轉型專案，將定期數據收集、格式轉換、通知發送、數據搬遷與利用、再行銷行為完全自動化；落地後能進一步對接ELT/Data Mart數據架構，支援行銷團隊進行策略成效追蹤與定時/即時決策。
-本專案成果不僅將業務流程自動化、最小化人工錯誤，也提供可迭代與可移植性的原型，更能做為小型數據需求測試，為後續資料基礎建設與數據驅動目標提供良好基礎。
+**本專案是一套以Zapier為觸發中介的品牌認知調查流程數位轉型專案，將定期數據收集、格式轉換、通知發送、數據搬遷與利用、再行銷行為完全自動化；落地後能進一步對接ELT/Data Mart數據架構，支援行銷團隊進行策略成效追蹤與定時/即時決策。**
+
+**本專案成果不僅將業務流程自動化、最小化人工錯誤，也提供可迭代與可移植性的原型，更能做為小型數據需求測試，為後續資料基礎建設與數據驅動目標提供良好基礎。**
 --- 
 
 ## Objectives專案目標
@@ -82,11 +83,10 @@
 
 ## Project Highlights 專案成果
 
-**轉型成效**
-- 累積品牌市調專案資料，支援各式品牌曝光ROI評估，加速行銷策略的迭代
-- 降低行銷團隊手動作業錯誤率至接近0%
-- 每日品牌市調數據處理時效由人工2小時縮短至15分鐘
-- 採Cloud-based DW、SQL-based Transformation與數據分層的數據治理架構，在轉型初期即建立良好的彈性、易維護性與近用性
+- [x] 累積品牌市調專案資料，支援各式品牌曝光ROI評估，加速行銷策略的迭代
+- [x] 降低行銷團隊手動作業錯誤率至接近0%
+- [x] 每日品牌市調數據處理時效由人工2小時縮短至0分鐘
+- [x] 採Cloud-based DW、SQL-based Transformation與數據分層的數據治理架構，在轉型初期即建立良好的彈性、易維護性與近用性
 ---
 
 ## Follow-up Optimization 後續優化 
@@ -102,11 +102,12 @@
 - [**Profile**](https://github.com/Rexgogo/dxsp01_brand_survey_automation.git)
 - [**GitHub**](https://github.com/Rexgogo/dxsp01_brand_survey_automation.git)
 - **Skills:**
-  - ETL (Airflow, Airbyte...)
-  - Data Modeling & SQL Transformation (dbt, BigQuery)
-  - Cloud-based Data Warehouse (BigQuery)
-  - Python Data Analysis
+  - Python/SQL
+  - ETL (Airflow)
+  - Data extract (Airbyte)
+  - Data Modeling & Transformation (dbt, BigQuery)
+  - Cloud Data Warehouse (BigQuery)
   - BI Dashboarding (Superset, Looker Studio)
-  - Automation design (Zapier)
+  - Automation tool (Zapier)
 
 --- 
