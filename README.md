@@ -70,18 +70,55 @@ dxsp01_survey_automate_zapier/
 
 ```
 
-## Workflow Diagram 工作流程圖
-
-eraser.ai
-資料流向、工具串接、測試與除錯、異常通知
+## Zapier Workflow Diagram 工作流程圖
 ```text
-  A[Typeform / Google Forms 問卷填答] --> B[Google Sheets 問卷同步]
-  B -->|Airbyte or Zapier| C[BigQuery 原始資料表]
-  C -->|dbt stg/transformation| D[中繼資料模型 int_]
-  D --> E[分析模型 mart_]
-  E --> F[Looker Studio 看板]
-
+Typeform → Formatter → Google Sheets → Webhook → Gmail
 ```
+1. Typeform - New Entry
+功能： 偵測新表單回覆
+設定：
+App：Typeform
+Trigger：New Entry
+選擇表單
+2. Formatter by Zapier - Date / Time
+功能： 轉換Typeform每筆紀錄生成的submitted_at欄位
+設定：
+App：Formatter
+Action Event：Date/Time
+Input： Submitted date
+To Format：YYYY-MM-DD
+To Timezone：UTC
+
+3. Google Sheets - Create Spreadsheet Row
+功能： 將問卷回覆內容寫入Google Sheets
+設定：
+App：Google Sheets
+Action：Create Spreadsheet Row
+選擇試算表與工作表
+將問卷欄位與Google Sheets一一對應
+*注意esponse_date要選擇轉換後的時間Date/Time in Formatter by Zapier
+
+4. Webhooks by Zapier - POST
+功能： 將資料POST至Airbyte Sync
+設定：
+App：Webhooks by Zapier
+Action：POST
+URL：目標API端點https://xxxxxxx.ngrok-free.app/api/v1/connections/sync (詳細請參考)
+Payload Type：JSON
+Data：選擇要傳送的欄位data { "connectionId": "18f5f65d-67a7-49ba-9838-07f56621110e" }
+Wrap Request In Array: Yes
+Unflatten: Yes
+Headers：Content-Type application/json
+
+5. Gmail - Send Email
+功能： 發送通知Email給問卷填答者
+設定：
+App：Gmail
+Action：Send Email
+To：問卷填答者Email 
+Subject：
+Body：
+
 ---
 
 ## Environment Setup Guide 環境配置指南
@@ -89,8 +126,8 @@ eraser.ai
 1. System
 
 Windows
-Python ver
-Docker ver
+Python 
+Docker
 
 2. 安裝步驟 (Installation Steps)
 
@@ -99,9 +136,7 @@ Docker ver
 3. API Keys & Credentials​
 
 申請Typeform API Token
-
 設定Zapier Webhook URL
-
 配置Airbyte的連線資訊​
 
 4. Local Development Setup
@@ -110,7 +145,6 @@ Docker ver
 執行資料庫遷移
 載入初始資料
 
-
 5. Testing & Verification
 
 - 接手維護人員如何測試
@@ -118,7 +152,7 @@ Docker ver
 
 ---
 
-## Project Results & Highlights 專案成果
+## Project Highlights 專案成果
 
 **轉型成效**
 - 累積品牌市調專案資料，作為評估策略成效與改善的基礎，加速行銷團隊策略的迭代
@@ -139,6 +173,7 @@ Docker ver
 
 - 整合進完整的資料管線
 - CI/CD 自動化測試與部署
+- 🔐 Webhooks by Zapiers改使用環境變數或 Zapier Secret 作為 token 儲存
 
 ---
 
