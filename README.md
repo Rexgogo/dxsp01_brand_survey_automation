@@ -3,7 +3,6 @@
 ## Overview專案簡介
 
 本專案是一套以Zapier為觸發中介的品牌認知調查流程數位轉型專案，將定期數據收集、格式轉換、通知發送、數據搬遷與利用、再行銷行為完全自動化；落地後能進一步對接ELT/Data Mart數據架構，支援行銷團隊進行策略成效追蹤與定時/即時決策。
-
 本專案成果不僅將業務流程自動化、最小化人工錯誤，也提供可迭代與可移植性的原型，更能做為小型數據需求測試，為後續資料基礎建設與數據驅動目標提供良好基礎。
 --- 
 
@@ -26,7 +25,7 @@
 | **Zapier** | 自動觸發資料流程與第三方軟體整合 |
 | **Google Sheets** | 問卷暫存與查閱 |
 | **Python** | 問卷資料清洗與貼標 |
-| **Airbyte** | 資料同步/E.工具 |
+| **Airbyte** | 資料同步/Extract工具 |
 | **BigQuery** | 雲端資料儲存與查詢 |
 | **dbt** | 資料建模與轉換(SQL-Based) |
 | **Looker Studio** | BI工具 |
@@ -37,33 +36,32 @@
 ## Folder Structure 資料結構
 
 ```text
-dxsp01_survey_automate_zapier/
-├── README.md
-├── .gitignore
-├── .env
-├── docker-compose.yml
-├── credentials/
-│   ├── zapier_credentials.json
-│   └── bigquery_credentials.json
-├── scripts/
-│   ├── data_cleaning.py
-│   ├── anomaly_detection.py
-│   ├── user_segmentation.py
-│   └── send_notifications.py
-├── airbyte/
-│   └── airbyte_config.yml
-├── dbt_project/
-│   ├── models/
-│   │   ├── staging/
-│   │   ├── intermediate/
-│   │   └── marts/
-│   ├── tests/
-│   ├── macros/
-│   ├── seeds/
-│   └── schema.yml
-└── docs/
-    ├── technical_documentation.md
-    └── workflow_diagram.png
+📁 dxsp01_brand_survey_automation
+├── 📁 dbt
+│   ├── 📄 dbt_project.yml
+│   ├── 📄 Dockerfile
+│   ├── 📁 logs
+│   │   └── 📄 dbt.log
+│   ├── 📁 models
+│   │   ├── 📁 intermediate
+│   │   │   ├── 📄 int_brand_survey_cleaned.sql
+│   │   │   └── 📄 int_brand_survey_cleaned.yml
+│   │   ├── 📁 mart
+│   │   ├── 📁 staging
+│   │   │   ├── 📄 bq_sources.yml
+│   │   │   └── 📄 stg_brand_survey.sql
+│   │   └── 📁 test
+│   │       └── 📄 test_model.sql
+│   ├── 📄 profiles.yml
+├── 📄 docker-compose.yml
+├── 📁 docs
+│   ├── 📄 airbyte_connection_setup.md
+│   ├── 📄 API.md
+│   ├── 📄 docker_airbyte_deployment.md
+│   ├── 📄 file_system_diagram.ipynb
+│   ├── 📄 zapier_trigger_airbyte.md
+│   └── 📄 zapier_worflow_setup.md
+├── 📄 README.md
 ```
 
 ## Zapier Workflow Diagram 工作流程圖
