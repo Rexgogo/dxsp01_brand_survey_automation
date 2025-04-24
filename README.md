@@ -66,8 +66,7 @@
 ```
 
 ## Zapier Workflow Diagram 工作流程圖
-<img src="assets/zapier_workflow_diagram.png" width="800"/>
-![Zapier Workflow Diagram](assets/zapier_workflow_diagram.png)
+<img src="assets/zapier_workflow_diagram.png" width="400"/>
 
 ```text
 [Typeform]       New Entry 收集問卷資料 →
