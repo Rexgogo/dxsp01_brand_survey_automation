@@ -1,13 +1,13 @@
 # DXSP01-Brand Survey Automation Project
 
-## Overview專案簡介
+## Overview 專案簡介
 
 **本專案是一套以Zapier為觸發中介的品牌認知調查流程數位轉型專案，將定期數據收集、格式轉換、通知發送、數據搬遷與利用、再行銷行為完全自動化；落地後能進一步對接ELT/Data Mart數據架構，支援行銷團隊進行策略成效追蹤與定時/即時決策。專案成果不僅將業務流程自動化、最小化人工錯誤，也提供可迭代與可移植性的原型，更能做為小型數據需求測試，為後續資料基礎建設與數據驅動目標提供良好基礎。**
 
 
 --- 
 
-## Objectives專案目標
+## Objectives 專案目標
 
 - 降低行銷團隊人工處理問卷與分析時間成本
 - 設計任務與資料流的運行邏輯
@@ -66,6 +66,8 @@
 ```
 
 ## Zapier Workflow Diagram 工作流程圖
+
+![Zapier Workflow Diagram](assets/zapier_workflow_diagram.png)
 
 ```text
 [Typeform]       New Entry 收集問卷資料 →
