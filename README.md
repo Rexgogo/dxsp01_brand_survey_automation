@@ -1,13 +1,13 @@
 # DXSP01-Brand Survey Automation Project
 
-## Overview 專案簡介
+## Overview
 
 **本專案是一套以Zapier為觸發中介的品牌認知調查流程數位轉型專案，將定期數據收集、格式轉換、通知發送、數據搬遷與利用、再行銷行為完全自動化；落地後能進一步對接ELT/Data Mart數據架構，支援行銷團隊進行策略成效追蹤與定時/即時決策。專案成果不僅將業務流程自動化、最小化人工錯誤，也提供可迭代與可移植性的原型，更能做為小型數據需求測試，為後續資料基礎建設與數據驅動目標提供良好基礎。**
 
 
 --- 
 
-## Objectives 專案目標
+## Objectives
 
 - 降低行銷團隊人工處理問卷與分析時間成本
 - 設計任務與資料流的運行邏輯
@@ -17,7 +17,7 @@
 ---
 
 
-## Technical Stack 工具技術
+## Technical Stack
 
 | 工具 | 用途 |
 |------|------|
@@ -34,7 +34,7 @@
 | **Gmail** | 自動發信 |
 ---
 
-## Folder Structure 資料結構
+## Folder Structure
 
 ```text
 📁 dxsp01_brand_survey_automation
@@ -65,7 +65,7 @@
 ├── 📄 README.md
 ```
 
-## Zapier Workflow Diagram 工作流程圖
+## Workflow Diagram
 <img src="assets/zapier_workflow_diagram.png" width="400"/>
 
 ```text
@@ -77,12 +77,12 @@
 ```
 ---
 
-## Environment Setup Guide 環境配置指南
+## Environment Setup Guide
 
 略，請參考docs/.md各個環境與設定指南
 ---
 
-## Project Highlights 專案成果
+## Project Highlights
 
 - [x] 累積品牌市調專案資料，支援各式品牌曝光ROI評估，加速行銷策略的迭代
 - [x] 降低行銷團隊手動作業錯誤率至接近0%
@@ -90,13 +90,13 @@
 - [x] 採Cloud-based DW、SQL-based Transformation與數據分層的數據治理架構，在轉型初期即建立良好的彈性、易維護性與近用性
 ---
 
-## Follow-up Optimization 後續優化 
+## Follow-up Optimization 
 
 - 整合進完整的資料管線(由Airflow排程)
 - 數據隱私管理(如Webhooks改採使用環境變數或Zapier Secret作為token儲存)
 ---
 
-## 👤 Author Maintainer 
+## 👤 Maintainer 
 
 - **Rex C.**
 - **chanminglung126@gmail.com**
@@ -109,6 +109,5 @@
   - Data Modeling & Transformation (dbt, BigQuery)
   - Cloud Data Warehouse (BigQuery)
   - BI Dashboarding (Superset, Looker Studio)
-  - Automation tool (Zapier)
-
+  - Automation tool (Zapier, n8n)
 --- 
