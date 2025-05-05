@@ -1,0 +1,128 @@
+version: 2
+models:
+  - name: int_brand_survey_cleaned
+    description: 'Intermediate layer: 將問卷原始資料解析並轉碼為分析友善格式'
+    columns:
+      - name: survey_submitted_at
+        description: 問卷提交時間
+        tests:
+          - not_null
+
+      - name: respondent_id
+        description: 填答者唯一 ID
+        tests:
+          - not_null
+          - unique
+
+      - name: age
+        description: 填答者年齡
+        tests:
+          - not_null
+
+      - name: gender
+        description: 填答者性別
+        tests:
+          - accepted_values:
+              values: ['男', '女']
+
+      - name: region
+        description: 填答者地區
+
+      - name: heard_of_brand
+        description: 是否聽過此品牌（原始文字）
+        tests:
+          - accepted_values:
+              values: ['是', '否']
+
+      - name: heard_of_brand_flag
+        description: 是否聽過此品牌（是=1，否=0）
+        tests:
+          - accepted_values:
+              values: [0, 1]
+
+      - name: purchased_before
+        description: 是否曾經購買（原始文字）
+        tests:
+          - accepted_values:
+              values: ['是', '否']
+
+      - name: purchased_before_flag
+        description: 是否曾經購買（是=1，否=0）
+        tests:
+          - accepted_values:
+              values: [0, 1]
+
+      - name: purchase_frequency
+        description: 購買次數
+
+      - name: purchase_channel
+        description: 購買渠道
+        tests:
+          - accepted_values:
+              values: ['品牌官網', '實體門市', '電商平台', '其他']
+
+      - name: purchased_category
+        description: 購買類別
+        tests:
+          - accepted_values:
+              values: ['保健食品', '美妝產品', '生活用品', '服飾配件', '其他']
+
+      - name: brand_awareness
+        description: 品牌認知程度（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: brand_trust
+        description: 品牌信任程度（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: perceived_quality
+        description: 感知品質（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: perceived_value
+        description: 感知價值（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: satisfaction
+        description: 整體滿意度（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: loyalty
+        description: 品牌忠誠度（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: recommend
+        description: 推薦意願（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: purchase_intent
+        description: 未來購買意願（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: brand_preference
+        description: 品牌偏好（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
+
+      - name: emotional_attachment
+        description: 品牌情感連結（Likert Scale）
+        tests:
+          - accepted_values:
+              values: [0, 1, 2, 3, 4, 5]
