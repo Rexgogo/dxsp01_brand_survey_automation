@@ -68,6 +68,9 @@ services:
         - db
       # http://127.0.0.1:8088
       # 登錄前需先執行docker exec -it dx01_viz_superset superset fab create-admin --username rex --password dx01
+      # -> docker exec -it dx01_viz_superset superset db upgrade
+      # -> docker exec -it dx01_viz_superset superset init
+
 
 networks:
   sp_bridge_001:
