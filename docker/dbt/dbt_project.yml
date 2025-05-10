@@ -1,8 +1,9 @@
-name: dxsp01
+name: dx01
 version: 1.0.0
-profile: dxsp01
+profile: dx01
 config-version: 2
 
+# model-paths
 model-paths:
   - models
 seed-paths:
@@ -19,14 +20,20 @@ clean-targets:
   - dbt_packages
   - logs
 models:
-    test:
-      +materialized: view  
-    staging:
-      +materialized: view
-    intermediate:
-      +materialized: table
-    mart:
-      +materialized: table
+  dx01:
+    dx01:
+      test:
+        +materialized: view 
+        +schema: dx01_test
+      staging:
+        +materialized: view
+        +schema: dx01_stg
+      intermediate:
+        +materialized: table
+        +schema: dx01_int
+      mart:
+        +materialized: table
+        +schema: dx01_mrt
 vars:
   data_start_date: 2024-01-01
 packages:
