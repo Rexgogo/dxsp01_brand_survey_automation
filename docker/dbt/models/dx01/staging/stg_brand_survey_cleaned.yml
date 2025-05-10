@@ -1,6 +1,6 @@
 version: 2
 models:
-  - name: int_brand_survey_cleaned
+  - name: stg_brand_survey_cleaned
     description: 'Intermediate layer: 將問卷原始資料解析並轉碼為分析友善格式'
     columns:
       - name: survey_submitted_at

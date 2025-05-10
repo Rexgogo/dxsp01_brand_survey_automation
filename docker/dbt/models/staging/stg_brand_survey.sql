@@ -1,1 +1,0 @@
-FROM {{ source('bq_raw_data', 'dx01_raw__stream_brandX_survey_result_2025_Q2') }}

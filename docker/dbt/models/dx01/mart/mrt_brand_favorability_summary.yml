@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: mrt_brand_favorability_summary
+    description: >
+      匯總各地區受訪者對品牌的好感度分數與分類比例，供 Superset 儀表板使用。
+    columns:
+      - name: region
+        description: "地區"
+        tests: [not_null]
+      - name: region_iso_code
+        description: "ISO 3166-2 區域代碼"
+      - name: respondent_count
+        description: "受訪者數"
+      - name: avg_favorability_score
+        description: "該地區平均好感度"
+      - name: favorability_positive_pct
+        description: "正面好感度比例"
+      - name: favorability_neutral_pct
+        description: "中立好感度比例"
+      - name: favorability_negative_pct
+        description: "負面好感度比例"

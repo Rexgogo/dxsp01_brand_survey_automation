@@ -1,3 +1,4 @@
+# models/staging/stg_brand_survey_cleaned.sql
 
 with source as(
     select * from {{ref('stg_brand_survey')}}

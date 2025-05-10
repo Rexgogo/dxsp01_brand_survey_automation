@@ -1,10 +1,14 @@
-dxsp01:
+# manage various projects environment
+
+# dbt core-bigquery (project: dxsp01) connection configurations
+dx01:
   target: dev
   outputs:
     dev:
       type: bigquery
+      # method + keyfile
       method: service-account
-      keyfile: /usr/app/credentials/bq-dxsp01-credentials-20250416.json
+      keyfile: /usr/app/credentials/dx01_gcp_credentials_20250416.json
       project: dx01-brand-survey-workflow
       dataset: dx01
       threads: 1

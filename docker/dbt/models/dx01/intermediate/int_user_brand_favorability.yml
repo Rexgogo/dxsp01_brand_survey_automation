@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: int_user_brand_favorability
+    description: >
+      根據品牌偏好、情感連結、滿意度與忠誠度，計算平均好感度分數與分類，作為品牌好感度分析基礎。
+    columns:
+      - name: respondent_id
+        description: "受訪者 ID"
+        tests: [not_null]
+      - name: region
+        description: "地區"
+      - name: region_iso_code
+        description: "ISO 3166-2 區域代碼"
+      - name: age
+        description: "年齡"
+      - name: gender
+        description: "性別"
+        tests:
+          - accepted_values:
+              values: ['男', '女']
+      - name: brand_preference
+        description: "品牌偏好程度（0–5）"
+      - name: emotional_attachment
+        description: "品牌情感連結（0–5）"
+      - name: satisfaction
+        description: "整體滿意度（0–5）"
+      - name: loyalty
+        description: "品牌忠誠度（0–5）"
+      - name: avg_favorability_score
+        description: "平均好感度分數"
+      - name: favorability_level
+        description: "分類後好感度（正面 / 中立 / 負面）"
+        tests:
+          - accepted_values:
+              values: ['正面', '中立', '負面']

@@ -1,0 +1,17 @@
+version: 2
+model:
+  - name: mrt_favorability_gender_summary
+    description: "依性別分析品牌好感度結構（正/中/負面）"
+    columns:
+      - name: gender
+        description: "受訪者性別（男 / 女）"
+      - name: respondent_count
+        description: "該性別的受訪者總數"
+      - name: avg_favorability_score
+        description: "平均品牌好感度（1–5）"
+      - name: favorability_positive_pct
+        description: "給予正面好感度的受訪者比例"
+      - name: favorability_neutral_pct
+        description: "給予中立好感度的受訪者比例"
+      - name: favorability_negative_pct
+        description: "給予負面好感度的受訪者比例"
